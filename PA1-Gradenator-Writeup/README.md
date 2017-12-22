@@ -43,7 +43,7 @@ does not follow the input format will result in undefined behavior.
 ## Getting Started
 
 (FIXME: update the link when have the actual assignment ready)
-0. Use the assignment URL  https://classroom.github.com/a/ffjzXCRo to set 
+0. Use the assignment URL https://classroom.github.com/a/ffjzXCRo to set 
 up a github repository.  And then clicked on that repository in your 
 web browser.
 (FIXME: Let the class staff know your repository name so Travis CI can be

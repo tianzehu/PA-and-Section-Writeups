@@ -1,4 +1,4 @@
-# PA1 Gradenator
+# PA1 Gradenator (Status: Draft, 12/22/17)
 
 The goals for PA1 are to get started with Java and figure out how to 
 calculate your current CS 210 grade.
@@ -42,6 +42,7 @@ does not follow the input format will result in undefined behavior.
 
 ## Getting Started
 
+(FIXME: update the link when have the actual assignment ready)
 0. Use the assignment URL  https://classroom.github.com/a/ffjzXCRo to set 
 up a github repository.  And then clicked on that repository in your 
 web browser.

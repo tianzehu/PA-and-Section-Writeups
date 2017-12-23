@@ -43,18 +43,15 @@ does not follow the input format will result in undefined behavior.
 ## Getting Started
 
 (FIXME: update the link when have the actual assignment ready)
-0. Use the assignment URL https://classroom.github.com/a/ffjzXCRo to set 
+1. Use the assignment URL https://classroom.github.com/a/ffjzXCRo to set 
 up a github repository.  And then clicked on that repository in your 
-web browser.
+web browser (pa1-gradenator-yourgithubid).
 (FIXME: Let the class staff know your repository name so Travis CI can be
 enabled).
 
-1. Now you are reading the README.md file in that repository.  The README.md
-files will be the assignment writeups.
-
 2. Click on the green "Clone or download" button on the right of the web page
 and copy the provided URL.  It should look like 
-(https://github.com/UACS210Spring2018/...).
+(https://github.com/UACS210Spring2018/pa1-gradenator-yourgithubid...).
 
 3. Import your PA1 repository into Eclipse.
     1. Open up Eclipse on a lab machine or your machine (if you are working on
@@ -64,7 +61,7 @@ and copy the provided URL.  It should look like
        paste in repository URL from github
 
     3. Next, Select the master branch, Next, make the local destination 
-       /home/username/eclipse-workspace/PA1-Gradenator-githubid.  
+       /home/username/eclipse-workspace/pa1-gradenator-yourgithubid.  
        This is where the local git repository will be placed.
 
     4. Next, Import existing Eclipse projects, Next, Finish.

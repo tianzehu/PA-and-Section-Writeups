@@ -49,6 +49,9 @@ web browser (pa1-gradenator-yourgithubid).
 (FIXME: Let the class staff know your repository name so Travis CI can be
 enabled).
 
+There is a tutorial with screen shots for steps 2 through 4 at
+https://docs.google.com/document/d/1CjE24ccurIDIHjMTgvu4cUuhKtMgUQKxjYaL3zH_nOE/edit?usp=sharing.
+
 2. Click on the green "Clone or download" button on the right of the web page
 and copy the provided URL.  It should look like 
 (https://github.com/UACS210Spring2018/pa1-gradenator-yourgithubid...).

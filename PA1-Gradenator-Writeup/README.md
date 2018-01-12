@@ -46,7 +46,7 @@ does not follow the input format will result in undefined behavior.
 
 ## Getting Started
 
-0. Fill out the google form at https://goo.gl/forms/iwkZLI61EtIXECOv1 to
+0. Fill out the google form at https://goo.gl/forms/Aeukbr19M8XXk1Uq1 to
 provide us your github id.  We cannot collect your assignment unless you do.
 In other words, YOUR ASSIGNMENT WILL NOT BE SUBMITTED IF WE DON'T HAVE THIS INFO.
 

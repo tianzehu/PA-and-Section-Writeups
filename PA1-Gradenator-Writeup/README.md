@@ -1,4 +1,4 @@
-# PA1 Gradenator (Status: Draft, 1/11/18)
+# PA1 Gradenator (Status: Posted, 1/12/18 at 11:30am)
 
 The goals for PA1 are to get started with Java and figure out how to 
 calculate your current CS 210 grade.
@@ -63,20 +63,15 @@ web browser (pa1-gradenator-yourgithubid).
    Edit the file from the github interface.  Click on the file and then the pencil
    icon to edit.  Put in the EMAIL YOU USE WITH GITHUB.
 
-    4. Within 5-10 minutes, you should receive an email from Travis CI to
-    your github email address letting you know that your current program is NOT
-    passing the public test cases.  However, if the program compiles in Eclipse,
-    then it should compile with the grading script.
-
-There is a tutorial with screen shots for steps 2 through 4 at
+There is a tutorial with screen shots for steps 3 through 5 at
 https://docs.google.com/document/d/1CjE24ccurIDIHjMTgvu4cUuhKtMgUQKxjYaL3zH_nOE/edit?usp=sharing.
 
 
-2. Click on the green "Clone or download" button on the right of the web page
+3. Click on the green "Clone or download" button on the right of the web page
 and copy the provided URL.  It should look like 
 (https://github.com/UACS210Spring2018/pa1-gradenator-yourgithubid...).
 
-3. Import your PA1 repository into Eclipse.
+4. Import your PA1 repository into Eclipse.
     1. Open up Eclipse on a lab machine or your machine (if you are working on
        your own machine, you will need to install Eclipse).
 
@@ -95,7 +90,7 @@ and copy the provided URL.  It should look like
        without the parens.  This is the relative path to a sample input 
        file.  Then click Run.
 
-4. Edit, commit, and push a small change to the program.
+5. Edit, commit, and push a small change to the program.
     1. Put the code `System.out.println("Hello");` into the main method.
     
     2. Run the program and see that "Hello" is printed to the Eclipse Console.
@@ -103,6 +98,13 @@ and copy the provided URL.  It should look like
     3. Right click on PA1Main.java --> Team --> Commit, move unstaged files
        that you want to commit into staged changes, put in a commit message,
        and then click commit and push.
+
+6. Within 5-10 minutes, you should receive an email from Travis CI to
+   your github email address letting you know that your current program is NOT
+   passing the public test cases.  If you click on the link and go to the
+   Travis CI webpage, scroll down all the output until you see the grade.sh
+   script being run.  That IS the grading script we will use as well.
+   Pay attention to its output.
 
 
 ## Testing your program

@@ -31,7 +31,7 @@ grade would be 20% + 25% ==> 45%.
 
 The output will be the average grade per line and a total line. Example
 output:
-```
+``` (FIXME: how would output actually be formatted?  Have the key do percents as integers.  Change the spec above.)
   final, 20%, 80
   programming assignments, 25%, 76.66666666666667
   TOTAL = 35.17% out of 45%

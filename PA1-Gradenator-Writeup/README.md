@@ -1,4 +1,4 @@
-# PA1 Gradenator (Status: Draft, 12/22/17)
+# PA1 Gradenator (Status: Draft, 1/11/18)
 
 The goals for PA1 are to get started with Java and figure out how to 
 calculate your current CS 210 grade.
@@ -14,7 +14,7 @@ Specifically a string with any characters except a comma, a comma, a
 double in the inclusive range 0 to 100 [0,100], a comma, and one or more
 doubles in the inclusive range 0 to 100 [0,100] separated by one or more
 spaces. The Java Scanner class with its nextLine() method can handle whatever
-line ending your file system uses.
+line ending your file system uses.  Read in ALL the numbers as doubles.
 
 Example input (see the syllabus for percentages):
 ```
@@ -24,19 +24,23 @@ Example input (see the syllabus for percentages):
 
 An overall grade will be calculated by averaging the grades listed at the end
 of each line (e.g. avg(90 60 80) ==> 76.67) and then computing a total grade
-based on the percentages indicated on each line (e.g. 0.20\*80 + 0.25\*76.67
-==> 35.17). Note that if the input percentages do not add up 100%, then the
+based on the percentages indicated on each line (e.g. (0.20)80 + (0.25)76.67
+==> 35.17, where (0.20)80 is another way to write 0.20 times 80).  
+Note that if the input percentages do not add up 100%, then the
 total grade will not be out of 100%. In the example above the best possible
 grade would be 20% + 25% ==> 45%.
 
 The output will be the average grade per line and a total line. Example
 output:
-``` (FIXME: how would output actually be formatted?  Have the key do percents as integers.  Change the spec above.)
-  final, 20%, 80
-  programming assignments, 25%, 76.66666666666667
-  TOTAL = 35.17% out of 45%
+```
+  final, 20.0%, 80.0
+  programming assignments, 25.0%, 76.66666666666667
+  TOTAL = 35.16666666666667% out of 45.0%
 ```
 
+The numbers should be stored as doubles and then just printed to standard output.
+
+Error checking:
 Your PA1 program can assume that all input follows the format. Any input that 
 does not follow the input format will result in undefined behavior.
 
@@ -44,6 +48,7 @@ does not follow the input format will result in undefined behavior.
 
 0. Fill out the google form at https://goo.gl/forms/iwkZLI61EtIXECOv1 to
 provide us your github id.  We cannot collect your assignment unless you do.
+In other words, YOUR ASSIGNMENT WILL NOT BE SUBMITTED IF WE DON'T HAVE THIS INFO.
 
 (FIXME: update the link when have the actual assignment ready)
 1. Use the assignment URL https://classroom.github.com/a/ffjzXCRo to set 

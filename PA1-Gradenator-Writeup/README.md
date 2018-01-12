@@ -105,6 +105,9 @@ and copy the provided URL.  It should look like
    Travis CI webpage, scroll down all the output until you see the grade.sh
    script being run.  That IS the grading script we will use as well.
    Pay attention to its output.
+   (1/12/18, 11:40am, We need to enable each repository.  Please be patient.
+    A private post to Dr. Strout on piazza is warranted an hour after you create
+    your repository by accepting the assignment).
 
 
 ## Testing your program

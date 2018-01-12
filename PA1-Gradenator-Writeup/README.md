@@ -50,23 +50,27 @@ does not follow the input format will result in undefined behavior.
 provide us your github id.  We cannot collect your assignment unless you do.
 In other words, YOUR ASSIGNMENT WILL NOT BE SUBMITTED IF WE DON'T HAVE THIS INFO.
 
-(FIXME: update the link when have the actual assignment ready)
-1. Use the assignment URL https://classroom.github.com/a/ffjzXCRo to set 
+1. Use the assignment URL https://classroom.github.com/a/y6qdo77O to set 
 up a github repository.  And then clicked on that repository in your 
 web browser (pa1-gradenator-yourgithubid).
 
-There is a tutorial with screen shots for steps 2 through 4 at
-https://docs.google.com/document/d/1CjE24ccurIDIHjMTgvu4cUuhKtMgUQKxjYaL3zH_nOE/edit?usp=sharing.
-
-LEFTOFF: FIXME: still editing this.
-5. Setting up automatic testing of your program with the public test cases.
+2. Setting up automatic testing of your program with the public test cases.
    We are using Travis CI to run our grade script on your program and the
    publicly available test cases in the PublicTestCases/ subdirectory of your
-   repository.  To make this work you need to edit the .travis.yml file.
+   repository.  To make this work you need to 
+       a. login to travis-ci.com with your github id and
+       b. edit the .travis.yml file for your pa1-gradenator-yourgithubid repository.
+   Edit the file from the github interface.  Click on the file and then the pencil
+   icon to edit.  Put in the EMAIL YOU USE WITH GITHUB.
+
     4. Within 5-10 minutes, you should receive an email from Travis CI to
     your github email address letting you know that your current program is NOT
     passing the public test cases.  However, if the program compiles in Eclipse,
     then it should compile with the grading script.
+
+There is a tutorial with screen shots for steps 2 through 4 at
+https://docs.google.com/document/d/1CjE24ccurIDIHjMTgvu4cUuhKtMgUQKxjYaL3zH_nOE/edit?usp=sharing.
+
 
 2. Click on the green "Clone or download" button on the right of the web page
 and copy the provided URL.  It should look like 

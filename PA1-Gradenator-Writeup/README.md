@@ -58,8 +58,8 @@ web browser (pa1-gradenator-yourgithubid).
    We are using Travis CI to run our grade script on your program and the
    publicly available test cases in the PublicTestCases/ subdirectory of your
    repository.  To make this work you need to 
-       a. login to travis-ci.com with your github id and
-       b. edit the .travis.yml file for your pa1-gradenator-yourgithubid repository.
+    1. login to travis-ci.com with your github id and
+    2. edit the .travis.yml file for your pa1-gradenator-yourgithubid repository.
    Edit the file from the github interface.  Click on the file and then the pencil
    icon to edit.  Put in the EMAIL YOU USE WITH GITHUB.
 

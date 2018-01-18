@@ -67,7 +67,7 @@ means comma separated values, so each value in each row is separated by a comma.
 Read in each line and process the string to place it into your HashMap.* Since 
 each line contains data about a new flight, your HashMap should be altered for 
 each line in the file. Use the put(key, value) method to add a new key to your 
-list and replace(key, value) to update a key if necessary. 
+list and replace(key, value) to update a key. 
 
 *See Resources below for a reminder about methods relating to Scanner and String. 
 

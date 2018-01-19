@@ -1,4 +1,4 @@
-# Section1-HashMap-WriteUp 
+# Section1-HashMap-WriteUp (status: draft 1/18/18)
 
 ## Introduction 
 Today's section will be an introduction to Java HashMaps and it will prepare

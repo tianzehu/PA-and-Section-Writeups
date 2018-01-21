@@ -30,18 +30,22 @@ Go to the course webpage, click resources, and then click on the Section 1
 URL.  It will be the URL for accepting the github classroom assignment
 for Section 1.
 
-The first step is to clone and import the Section 1 gitrepo. 
+Then you need to edit your .travis.yml file in your section1 repository on 
+github, and then clone and import the Section 1 gitrepo.
+  * Click on .travis.yml in github.  Then put in your email and commit that change.
+  
+  * Click on the green "Clone or download" button on the right of the web page 
+    and copy the provided URL.
 
-Click on the green "Clone or download" button on the right of the web page 
-and copy the provided URL.
-
-Import your Section 1 repository into Eclipse.
-- open Eclipse 
-- File —> Import —> Git —> Projects from Git, Next, Clone URI, Next, paste in repository URL from github
-- Next, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section1-yourgithubid.
-- Next, Import existing Eclipse projects, Next, Finish.
+  * Import your Section 1 repository into Eclipse.
+    * open Eclipse 
+    * File —> Import —> Git —> Projects from Git, Next, Clone URI, Next, paste in repository URL from github
+    * Next, Select the master branch, Next, make the local destination 
+      /home/username/eclipse-workspace/Section1-yourgithubid.
+    * Next, Import existing Eclipse projects, Next, Finish.
 
 Now you are ready to get started coding. 
+
 
 ## The Assignment
 Overview : Read in the given file from the command line and calculate the 

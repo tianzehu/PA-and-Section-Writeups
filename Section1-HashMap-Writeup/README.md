@@ -67,10 +67,10 @@ then click commit and push.
 ### Step One - Open the file 
 Similarly to PA1 you will be reading in a file from the command line. Begin 
 by initializing a Scanner object, or other file reader of your choice, as 
-demonstrated in class. Test that you are able to open routesSec1.csv when 
+demonstrated in class. Test that you are able to open PublicTestCases/routesSec1csv.in when 
 given the file on the command line.
 
-Take a moment to open up routesSec1.csv in Eclipse.  What do you see?
+Take a moment to open up PublicTestCases/routesSec1csv.in in Eclipse.  What do you see?
 See https://www.kaggle.com/open-flights/flight-route-database for a 
 description of the fields in the file.
 
@@ -126,9 +126,10 @@ is interesting to note that put(key, value) will replace the value stored in the
 HashMap if the key exists already with the value passed in as a parameter and so
 will replace(key, value). 
 
-It is important to note, the file you will be reading in is routesSec1.csv. CSV
-means comma separated values, so each value in each row is separated by a comma.
+It is important to note, the file you will be reading in is PublicTestCases/routesSec1csv.in.
+CSV means comma separated values, so each value in each row is separated by a comma.
 Since this is the case, what should each line be split on? 
+(Note: We are using the .in extension to make it work with our grading script.)
 
 Below is a reminder of how to use the split method. 
 

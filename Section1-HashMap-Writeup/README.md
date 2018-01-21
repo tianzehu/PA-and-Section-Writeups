@@ -2,36 +2,40 @@
 
 ## Introduction 
 Today's section will be an introduction to Java HashMaps and it will prepare
-you for PA2 by farmiliarizing you with the relevant data set. Hashmaps are
+you for PA2 by familiarizing you with the flights data set. Hashmaps are
 similar to Python's dictionaries. The similarities include both data structures
 being a mapping from keys to values and that they are unordered data structures.
 Below are some of the basic Java hashmap methods compared to their equivalent 
 python method. 
 
-Java					vs 	Python 
-
-get(key); 			|	get(key)
-
-put(key, value);		| 	dict[key] = value
-
-remove(key);			|	pop(key); 
+| Java                  | Python            | 
+|-----------------------|-------------------|
+| dict.get(key);        | dict.get(key)     |
+| dict.put(key, value); | dict[key] = value |
+| dict.remove(key);     | dict.pop(key);    | 
 
 
 Here is a link to Java's API that describes the HashMap data type and how 
-to use all of its built in constructors and methods: https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
+to use all of its built in constructors and methods: 
+https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html
 
-The Java API is a great resource for better understanding the lanaguge and
+The Java API is a great resource for better understanding the language and
 I encourage you to utilize this resource as you are learning about Java this
 semester. Additionally, we encourage paired programming during section, so 
-please work through the section activity with the student sitting next to you. 
+please work through the section activity with a student sitting next to you.
+In section you can share code.  For programming assignments you cannot.
 
-## Setup 
-The first step is to clone and import the Section1 gitrepo. 
+## Setup
+Go to the course webpage, click resources, and then click on the Section 1
+URL.  It will be the URL for accepting the github classroom assignment
+for Section 1.
+
+The first step is to clone and import the Section 1 gitrepo. 
 
 Click on the green "Clone or download" button on the right of the web page 
 and copy the provided URL.
 
-Import your Section1 repository into Eclipse.
+Import your Section 1 repository into Eclipse.
 - open Eclipse 
 - File —> Import —> Git —> Projects from Git, Next, Clone URI, Next, paste in repository URL from github
 - Next, Select the master branch, Next, make the local destination /home/username/eclipse-workspace/Section1-yourgithubid.
@@ -64,24 +68,28 @@ then click commit and push.
 Similarly to PA1 you will be reading in a file from the command line. Begin 
 by initializing a Scanner object, or other file reader of your choice, as 
 demonstrated in class. Test that you are able to open routesSec1.csv when 
-given the file on the command line. 
+given the file on the command line.
+
+Take a moment to open up routesSec1.csv in Eclipse.  What do you see?
+See https://www.kaggle.com/open-flights/flight-route-database for a 
+description of the fields in the file.
 
 If you get stuck, here is example code demonstrating the use of Scanner.
 
 ```
 public static void main(String[] args) {
-	Scanner input = null; 
+    Scanner input = null; 
 	
-	System.out.println("args[0]="+args[0]);
-	try {
-		input = new Scanner(new File(args[0]));
-		while (input.hasNextLine()) {
-			System.out.println(input.nextLine());
-		}
-		input.close();
-	} catch (Exception ex) {
-		ex.printStackTrace();
-	}
+    System.out.println("args[0]="+args[0]);
+    try {
+        input = new Scanner(new File(args[0]));
+        while (input.hasNextLine()) {
+            System.out.println(input.nextLine());
+        }
+        input.close();
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
 }
 ```
 The scanner input is initialized to null at the beginning of main so that the
@@ -102,7 +110,7 @@ types for the HashMap and is what will be referenced through the remainder of
 the activity. 
 
 ```
-HashMap<String, Integer> airportToNumFlights = new HashMap<String, Integer>();
+    HashMap<String, Integer> airportToNumFlights = new HashMap<String, Integer>();
 ```
 The HashMap declaration should occur in the countDepartures method. This method 
 is also where the reading of the data will occur and the HashMap created will 
@@ -110,9 +118,9 @@ be returned to main for printing. Since the reading will occur in the function,
 the scanner must be passed into the countDepartures method as a parameter.  
 
 ### Step Three - Read the data into the HashMap 
-Read in each line and process the string to place it into your HashMap.* Since 
-each line contains data about a new flight, your HashMap should be altered for 
-each line in the file. Use the put(key, value) method to add a new key to your 
+Read in each line and process the string to place it into your HashMap (*).
+Since each line contains data about a new flight, your HashMap should be altered
+for each line in the file. Use the put(key, value) method to add a new key to your 
 list and replace(key, value) or put(key,value) to update a key if necessary. It
 is interesting to note that put(key, value) will replace the value stored in the
 HashMap if the key exists already with the value passed in as a parameter and so
@@ -125,27 +133,31 @@ Since this is the case, what should each line be split on?
 Below is a reminder of how to use the split method. 
 
 ```
-String[] strs = s1.split(" ");
+    String[] strs = s1.split(",");
 ```
 
-Determine which element of the array you will need to access in order to read in
-the source airport. The three letter source airport code will be your key and the
-count of flights will be your value. What value should you initialize each key to?
-When should you increment the value? How should you update the value?  
+Determine which element of the array you will need to access to read the
+source airport. A String with the three letter source airport code will be 
+your key and the count of flights starting at that airport will be your 
+value. What value should you initialize each key to?  When should you increment 
+the value? How should you update the value?  
 
 Hint: The get(key) method returns the value associated with the key 
 
-*See Resources below for a reminder about methods relating to Scanner and String. 
+(*) See Resources below for a reminder about methods relating to Scanner and String. 
 
 ### Step Four - Output the Results 
-Once you have totaled all departing flights, print the output with this format:
-Three Digit Airport Code - Number of flights 
+Once you have totaled all departing flights, print the airports in alphabetic
+order followed by the number of flights leaving that airport in the following
+format:
+
+    Three Digit Airport Code - Number of flights 
 
 Example 
 
 ```
- MRV - 1
  GYD - 1 
+ MRV - 1
 ```
 
 Remember a HashMap is unordered, so you will have to take the following step 
@@ -158,8 +170,8 @@ need to store a return as the keys are sorted inside of the exisiting
 data structure. 
 
 ```
-ArrayList<String> airportsSorted = new ArrayList<String>(airportToNumFlights.keySet());
-Collections.sort(airportsSorted);
+    ArrayList<String> airportsSorted = new ArrayList<String>(airportToNumFlights.keySet());
+    Collections.sort(airportsSorted);
 ```
 
 Now it is possible to iterate over the HashMap and have output print in 
@@ -168,9 +180,9 @@ iterates over each element in the ordered list airportsSorted and then
 access the corresponding value in the HashMap. 
 
 ```
-for (String airport : airportsSorted) {
-	System.out.println(airport + " - " + airportToNumFlights.get(airport));
-}
+    for (String airport : airportsSorted) {
+        System.out.println(airport + " - " + airportToNumFlights.get(airport));
+    }
 ```
 
 ## Reminders

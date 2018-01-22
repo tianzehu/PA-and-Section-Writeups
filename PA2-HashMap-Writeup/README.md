@@ -1,4 +1,4 @@
-# PA2-HashMaps-Key
+# PA2-HashMaps-Key (Status: Draft 1/22/18 7am)
 PA2-HashMaps assignment key and initial assignment writeup draft.
 
 ## Learning Objectives
@@ -94,6 +94,18 @@ ASF - 2
 KZN - 3
 ```
 
+## Getting Started
+
+The process for getting started will be very similar to what was done in PA1.
+* There is a github assignment link on the class web page --> resources link.
+  Accept the assignment to have a github repository be created for you.
+* Edit the .travis.yml file on github to put in your email address (the one
+  associated with your github account).  Commit that change in github.
+* Import your PA2 repository into Eclipse (see PA1 writeup for details).
+
+If you didn't already provide us with your github ID,
+fill out the google form at https://goo.gl/forms/Aeukbr19M8XXk1Uq1
+
 ## Decomposition Ideas
 
 The section activity provides an introduction to reading csv files and
@@ -118,13 +130,14 @@ returned value.
 
 Half of the PA2 grade will be correctness.  For this assignment, there
 will be some private test cases.  Partial points will be given if just
-one or two of the commands is implemented.
+one or two of the commands is implemented and works on those test cases.
 
 The other half of the PA2 grade will be your decomposition and code clarity.
 
 Decomposition
 * Should carefully select data structures that implement the 
-  required functionality.
+  required functionality.  For example, if you avoid using HashMaps,
+  it will probably result in more complicated code and thus points off.
 
 * Should just use static methods in the single PA1Main class.
 
@@ -162,3 +175,8 @@ the syntax style should be fine.
 Write your own code.  We will be using a tool that finds overly similar code.
 I recommend that when talking with others about the assignment, do not write
 anything down.
+
+## Submission
+
+For PA2, you are required to submit your PA2Main.java file to Gradescope.
+

@@ -46,7 +46,7 @@ of total flights.  The total flights includes both arriving
 and departing flights for each airport.  In the case of ties, keep 
 track of all airports with the maximum number of flights
 and output them alphabetically, see decomposition below for 
-help and PublicTestCases/cmdMAX-test1.out for formating. 
+help and PublicTestCases/cmdMAX-test1.out for formatting. 
 
 ***DEPARTURES*** - The goal of this function is to print an alphabetical 
 list of all destinations an airport flies to. Each airport with its 
@@ -59,7 +59,7 @@ on the command line.  This integer is used as a cut off to eliminate
 airports that have a total number of flights less than or equal to the limit. 
 So, this function is similar to MAX as it relies on a mapping of airports to 
 the total number of flights. After the totals are calculated, the airports 
-with a total numer of flights less than or equal to the limit should be 
+with a total number of flights less than or equal to the limit should be 
 ignored and only the remaining airports should be output in alphabetical order. 
 See Output below for formating help and decomposition for help alphabetically 
 ordering the airports.

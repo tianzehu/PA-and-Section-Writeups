@@ -63,7 +63,7 @@ with a total number of flights less than or equal to the limit should be
 ignored and only the remaining airports should be output in alphabetical order. 
 See Output below for formating help and decomposition for help alphabetically 
 ordering the airports.
-Hint: To avoid a Concurent Modification Exception, you cannot use remove 
+Hint: To avoid a Concurrent Modification Exception, you cannot use remove 
 when looping over the keys, you must use a supplementary data structure. 
 
     

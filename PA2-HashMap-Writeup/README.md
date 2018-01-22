@@ -56,12 +56,13 @@ or PublicTestCases/cmdDEPARTURES-test1.out for a visual.
 
 ***LIMIT*** - The limit function requires an additional integer argument 
 on the command line.  This integer is used as a cut off to eliminate 
-airports that have fewer flights than the limit. So, this function is 
-similar to MAX as it relies on a mapping of airports to the total number of 
-flights. After the totals are calculated, the airports with fewer flights 
-should be ignored and only the remaining airports should be output in 
-alphabetical order. See Output below for formating help 
-and decomposition for help alphabetically ordering the airports. 
+airports that have a total number of flights less than or equal to the limit. 
+So, this function is similar to MAX as it relies on a mapping of airports to 
+the total number of flights. After the totals are calculated, the airports 
+with a total numer of flights less than or equal to the limit should be 
+ignored and only the remaining airports should be output in alphabetical order. 
+See Output below for formating help and decomposition for help alphabetically 
+ordering the airports.
 Hint: To avoid a Concurent Modification Exception, you cannot use remove 
 when looping over the keys, you must use a supplementary data structure. 
 

@@ -118,7 +118,7 @@ to complete the command.
 Since HashMaps are unordered, special steps must be taken for them to be 
 outputted in an ordered format. As shown below, take the set of keys and 
 input it into an ArrayList of type String. Then use a Collections sort to 
-sort the keys in place. Since the keys are sorted in the exisiting data 
+sort the keys in place. Since the keys are sorted in the existing data 
 structure, you do not need to set the Collections.sort() call to store a 
 returned value.
 

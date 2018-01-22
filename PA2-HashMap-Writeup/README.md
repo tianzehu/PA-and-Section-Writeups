@@ -1,4 +1,4 @@
-# PA2-HashMaps-Key (Status: Draft 1/22/18 7am)
+# PA2-HashMaps-Key (Status: Released 1/22/18 8:30am)
 PA2-HashMaps assignment key and initial assignment writeup draft.
 
 ## Learning Objectives

@@ -21,7 +21,7 @@ For this project we will be using flight data that you can download from
 the following website: 
 https://www.kaggle.com/open-flights/flight-route-database.
 When you click the Data tab and then try to download the routes.csv
-file, you fill be asked to create a kaggle account.
+file, you will be asked to create a kaggle account.
 The easiest way to do so is to create a kaggle account with your UA email by 
 selecting the Google option under sign up with one click. 
 
@@ -61,7 +61,7 @@ So, this function is similar to MAX as it relies on a mapping of airports to
 the total number of flights. After the totals are calculated, the airports 
 with a total number of flights less than or equal to the limit should be 
 ignored and only the remaining airports should be output in alphabetical order. 
-See Output below for formating help and decomposition for help alphabetically 
+See Output below for formatting help and decomposition for help alphabetically 
 ordering the airports.
 Hint: To avoid a Concurrent Modification Exception, you cannot use remove 
 when looping over the keys, you must use a supplementary data structure. 

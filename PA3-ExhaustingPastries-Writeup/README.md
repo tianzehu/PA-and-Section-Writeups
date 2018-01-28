@@ -64,6 +64,7 @@ Any pastry with no prices given will considered length 0 for price 0.
 
 ## Examples
 
+### Example 1
 Given the following input file:
 ```
 300
@@ -82,6 +83,20 @@ Blank Pastry: 0
 Cheese Cake: 248
 Chocolate Cake: 873
 The max number of unique pastries that can be bought with $300 is: 2
+```
+### Example 2
+Given the following input file:
+
+```
+IncorrectBudget
+Cheese Cake: 62 83 44 48 
+Chocolate Cake: 97 100 11 49 96 28 33 45 
+Baguette: 24 24 58 79 12 83 79 44 13 5 
+Blank Pastry: 
+```
+The output should be: 
+```
+ERROR: Incorrect budget input
 
 ```
 Notice the two error print outs. First error because the 'Chocolate Cake' pastry has a 'z' in it, and second

@@ -49,12 +49,14 @@ For this assignment, you will be responsible for developing checks on the input 
 
 Required error checking:
 ```
-If an invalid file is given then print 'ERROR: File not found' and exit with a status code of 1
+If an invalid file is given then print:
+'ERROR: File not found' and exit with a status code of 1
 
-If budget is not a number print 'ERROR: Incorrect budget input' and exit with a status code of 1
+If budget is not a number print:
+'ERROR: Incorrect budget input' and exit with a status code of 1
 
-If any price per length is not a number print 'ERROR: Incorrect price input' and continue reading 
-  in values, ignoring the non numeric value.
+If any price per length is not a number print:
+'ERROR: Incorrect price input' and continue reading in values, ignoring the non numeric value.
   ```
   
 
@@ -160,12 +162,11 @@ The other half of the PA3 grade will be your decomposition and code clarity.
 Decomposition
 * Should just use static methods in the single PA3Main class.
 
-* Use a single file.  This should be a small program (<200 lines).
+* Use a single file: PA3Main.java
 
 * Each static method should be less than 30 lines.
 
 * Make things as simple as possible.
-  * Avoid nested loops.
   * Avoid nesting conditionals.
   * Avoid too many levels of user-defined methods calling other
   user-defined methods.

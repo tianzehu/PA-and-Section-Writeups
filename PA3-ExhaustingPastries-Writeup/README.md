@@ -1,6 +1,6 @@
-# PA3-ExhaustingPastries-Key (Status: Posted, 1/12/18 at 11:30am)  <------ Update when ready.
+# PA3-ExhaustingPastries-Key (Status: DRAFT, 1/28/18 at 11:30am)
 
-PA3-ExhaustingPastries assignment key and initial writeup draft.
+PA3-ExhaustingPastries project writeup.
 
 ## Learning Objectives
 The goal of this assignment is to practice the following decomposition, algorithm pattern, and data structure approaches.

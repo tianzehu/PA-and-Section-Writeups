@@ -140,7 +140,7 @@ Decomposition
   required functionality.  For example, if you avoid using HashMaps,
   it will probably result in more complicated code and thus points off.
 
-* Should just use static methods in the single PA1Main class.
+* Should just use static methods in the single PA2Main class.
 
 * Use a single file.  This should be a small program (<300 lines).
 

@@ -84,6 +84,10 @@ Cheese Cake: 248
 Chocolate Cake: 873
 The max number of unique pastries that can be bought with $300 is: 2
 ```
+
+Notice the two error print outs. First error because the 'Chocolate Cake' pastry has a 'z' in it, and second
+error because the 'Blank Pastry' is of length 0
+
 ### Example 2
 Given the following input file:
 
@@ -99,8 +103,7 @@ The output should be:
 ERROR: Incorrect budget input
 
 ```
-Notice the two error print outs. First error because the 'Chocolate Cake' pastry has a 'z' in it, and second
-error because the 'Blank Pastry' is of length 0
+
 
 ## Getting Started
 You will first need to consider all the different combinations of cuts and compare their prices to find the best one. 

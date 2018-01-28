@@ -44,7 +44,7 @@ length of 1 unit, price per length of 2 units, etc.
 
 
 
-### Error Checking
+## Error Checking
 For this assignment, you will be responsible for developing checks on the input data.
 
 Required error checking:
@@ -55,11 +55,12 @@ If budget is not a number print 'ERROR: Incorrect budget input' and exit with a 
 
 If any price per length is not a number print 'ERROR: Incorrect price input' and continue reading 
   in values, ignoring the non numeric value.
+  ```
   
 
 Any pastry with no prices given will considered length 0 for price 0.
 
-### Examples
+## Examples
 
 Given the following input file:
 ```
@@ -83,7 +84,6 @@ The max number of unique pastries that can be bought with $300 is: 2
 ```
 Notice the two error print outs. First error because the 'Chocolate Cake' pastry has a 'z' in it, and second
 error because the 'Blank Pastry' is of length 0
-```
 
 ## Getting Started
 You will first need to consider all the different combinations of cuts and compare their prices to find the best one. 

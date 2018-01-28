@@ -55,11 +55,35 @@ If budget is not a number print 'ERROR: Incorrect budget input' and exit with a 
 
 If any price per length is not a number print 'ERROR: Incorrect price input' and continue reading 
   in values, ignoring the non numeric value.
-
-```
+  
 
 Any pastry with no prices given will considered length 0 for price 0.
 
+### Examples
+
+Given the following input file:
+```
+300
+Cheese Cake: 62 83 44 48 
+Chocolate Cake: 97 100 11 49 z 96 28 33 45 
+Baguette: 24 24 58 79 12 83 79 44 13 5 
+Blank Pastry: 
+```
+
+The output should be: 
+```
+ERROR: Incorrect price input
+ERROR: Incorrect price input
+Baguette: 240
+Blank Pastry: 0
+Cheese Cake: 248
+Chocolate Cake: 873
+The max number of unique pastries that can be bought with $300 is: 2
+
+```
+Notice the two error print outs. First error because the 'Chocolate Cake' pastry has a 'z' in it, and second
+error because the 'Blank Pastry' is of length 0
+```
 
 ## Getting Started
 You will first need to consider all the different combinations of cuts and compare their prices to find the best one. 

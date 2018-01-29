@@ -13,13 +13,16 @@ The goal of this assignment is to practice the following decomposition, algorith
 
 The assignment will also require checking that the input data is valid.
 
-## The Assignment <---- UNFINISHED
+## The Assignment
 
 For this assignment, you are simulating a bakery.
 You will be given an input file which lists every pastry the bakery is selling today.
 The pastries can be cut into slices which are sold for different amounts depending on their length.
-Your goal is to maximize the bakery's profits by finding which combination of slices will maximize your profits.
-Once you have sliced the pastries and set their prices, you will take the role of the customer. Given a certain budget, you will find the maximum number of unique pastries you can purchase.
+Your goal is to maximize the bakery's profits by finding which combination of slices 
+will maximize your profits.
+Once you have sliced the pastries and set their prices, you will take the role 
+of the customer. Given a certain budget, you will find the maximum number of 
+unique pastries the customer can purchase.
 
 
 ## Input File
@@ -32,16 +35,53 @@ java PA3Main inputFile
 
 The input file should have the following format:
 ```
-<budget integer>
-<string>: <integer> <integer> <integer> <integer> ....
-<string>: <integer> <integer> <integer> <integer> ....
+<customer budget integer>
+<string>: <integer cost of 1in slice> <integer cost of 2in slice> <integer cost of 3in slice> ...
+<string>: <integer cost of 1in slice> <integer cost of 2in slice> <integer cost of 3in slice> ...
 ...
 ...
 ...
 ```
-The file could have any number of lines and each pastry line could have any number of integers. The first integer is the budget you have for buying pastries. This is followed by a list of pastries, starting with a name, then followed by the price for 
+The first integer is the budget customers have for buying pastries. 
+This is followed by a list 
+of pastries, starting with a pastry name, then followed by the price for 
 length of 1 unit, price per length of 2 units, etc.
+The file could have any number of lines and each pastry line could have any number of length costs.
+If a pastry has X costs after it, then it is X inches long.
 
+## Simple Example
+
+As an example, consider the PublicTestCases/simple.in file:
+```
+10
+baguette: 2 3 3 4
+```
+The customer has a $10 budget.  The pastry shop has only a baguette that is
+4 inches long.  A one-inch pieces is $2, a two-inch pieces is $3, a three-inch
+piece is $3, and a four-inch piece is $4.
+
+The idea is to enumerate over all possible ways to cut up the pastry and
+determine which cutting costs the most and thus makes the most for the
+baker.
+
+Below is an enumeration of all possible ways to cut the baguette based
+on number of pieces of each size.  The last column is how much money
+such a cutting will make.  The baker will want to pick the highest one.
+```
+ #1in #2in #3in #4in  $$
+   0   0    0    0    0
+   1   0    0    0    2
+   2   0    0    0    4
+   3   0    0    0    6
+   4   0    0    0    8
+   1   1    0    0    5
+   2   1    0    0    7
+   1   0    1    0    5
+   ...
+```
+
+Then the customer will buy the maximum number of unique pastries they can with
+their budget.
 
 
 ## Error Checking

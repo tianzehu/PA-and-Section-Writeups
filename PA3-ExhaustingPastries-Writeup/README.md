@@ -22,7 +22,8 @@ Your goal is to maximize the bakery's profits by finding which combination of sl
 will maximize your profits.
 Once you have sliced the pastries and set their prices, you will take the role 
 of the customer. Given a certain budget, you will find the maximum number of 
-unique pastries the customer can purchase.
+unique pastries the customer can purchase.  The customer will be buying all
+of any one pastry.
 
 
 ## Input File
@@ -81,7 +82,51 @@ such a cutting will make.  The baker will want to pick the highest one.
 ```
 
 Then the customer will buy the maximum number of unique pastries they can with
-their budget.
+their budget.  For this simple example, the budget of $10 is enough to buy
+the $8 configuration of four 1 inch pieces of the baguette.
+When a customer buys a pastry, they buy all pieces of the pastry.
+The bakery only has the one pastry that it cut into pieces.
+
+## Another Simple example
+You will first need to consider all the different combinations of cuts 
+and compare their prices to find the best one. 
+For example, consider the following baguette:
+```
+baguette 2, 8, 4, 6
+
+This baguette can be sliced into lengths of 1, 2, 3, and 4. 
+Possible combinations are:
+ A single length 4 slice for $6
+ A slice length 3 for $4 and a slice length 1 for $2
+ Two slices length 2 for a total of $16
+ Four slices length 1 for a total of $8
+ Two slices of length 1 and one slice of length 2 for a total of $12
+ 
+ The best way to slice would be 2 slices for $8 each. Set this as the cost for baguettes.  
+```
+
+You will need to consider how to exhaustively search through all 
+possible slicing combinations to find the best one.
+
+After you have set all the prices for the pastries, 
+put yourself in the shoes of the customer. For example:
+```
+Your budget is $30.
+baguette = $16
+cupcake = $12
+pie = $14
+cookie = $4
+
+The largest of unique pastries you can buy are the cookie, cupcake, and pie for 3 pastries total.
+
+You can only buy 2 pastries if you buy the baguette.
+
+```
+
+Print the max number of unique pastries when you have found it:
+"The max number of unique pastries that can be bought with $budget is: " followed by an int value.
+So the example above would print:
+"The max number of unique pastries that can be bought with $30 is: 3" 
 
 
 ## Error Checking
@@ -98,11 +143,10 @@ If budget is not a number print:
 If any price per length is not a number print:
 'ERROR: Incorrect price input' and continue reading in values, ignoring the non numeric value.
   ```
-  
-
+ 
 Any pastry with no prices given will considered length 0 for price 0.
 
-## Examples
+## More Examples
 
 ### Example 1
 Given the following input file:
@@ -145,85 +189,42 @@ ERROR: Incorrect budget input
 ```
 
 
-## Getting Started
-You will first need to consider all the different combinations of cuts and compare their prices to find the best one. 
-For example, consider the following baguette:
-```
-baguette 2, 8, 4, 6
 
-This baguette can be sliced into lengths of 1, 2, 3, and 4. 
-Possible combinations are:
- A single length 4 slice for $6
- A slice length 3 for $4 and a slice length 1 for $2
- Two slices length 2 for a total of $16
- Four slices length 1 for a total of $8
- Two slices of length 1 and one slice of length 2 for a total of $12
- 
- The best way to slice would be 2 slices for $8 each. Set this as the cost for baguettes.  
-```
+## Testing your program
 
-You will need to consider how to exhaustively search through all possible slicing combinations to find the best one.
+When you commit and push, Travis CI will send you an email to let you know
+if the public test cases failed.
+We STRONGLY recommend you put some of your own test cases in PublicTestCases/.
+Read grade.py to see how the .in and .out files should be named.
+Also look at the examples that are already in the PublicTestCases/ subdirectory.
 
-After you have set all the prices for the pastries, put yourself in the shoes of the customer. For example:
-```
-Your budget is $30.
-baguette = $16
-cupcake = $12
-pie = $14
-cookie = $4
-
-The highest amount of unique pastries you can buy are the cookie, cupcake, and pie for 3 pastries total.
-
-You can only buy 2 if you buy the baguette.
-
-```
-
-Print the max number of unique pastries when you have found it:
-"The max number of unique pastries that can be bought with $budget is: " followed by an int value.
-So the example above would print:
-"The max number of unique pastries that can be bought with $30 is: 3" 
-
-## Testing your program <----- UNFINISHED
+Upload it to Gradescope and you will be able to see 
+which public test cases were passed/failed.
 
 
-Upload it to gradescope under the current project, and you will be able to see which test cases were passed/failed.
+## Decomposition Ideas
 
+See the slides from class and examples from Section 2 about 
+performing exhaustive searches.  What will the stopping
+criteria be for the TWO exhaustive searches this program
+will need to do?
 
-## Decomposition Ideas <----- UNFINISHED
-
-Section activites
-* System.out.println() is your friend
-* Recursion is your friend
-* new Scanner(File)
-  * hasNextLine()
-  * nextLine()
-  * next()
-  * nextInt()
-  * close()
-* String
-  * trim()
-  * split()
-* Collections
-  * add()
-  * sort()
-* Iterating over an array of strings,
-  https://www.guru99.com/foreach-loop-java.html
 
 
 ## Grading Criteria
 
-Half of the PA2 grade will be correctness.  For this assignment, there
+Half of the PA3 grade will be correctness.  For this assignment, there
 will be some private test cases.  Partial points will be given if just
 one or two of the commands is implemented and works on those test cases.
 
-The other half of the PA2 grade will be your decomposition and code clarity.
+The other half of the PA3 grade will be your decomposition and code clarity.
 
 Decomposition
 * Should carefully select data structures that implement the 
   required functionality.  For example, if you avoid using HashMaps,
   it will probably result in more complicated code and thus points off.
 
-* Should just use static methods in the single PA2Main class.
+* Should just use static methods in the single PA3Main class.
 
 * Use a single file.  This should be a small program (<300 lines).
 
@@ -270,4 +271,4 @@ anything down.
 
 ## Submission
 
-For PA2, you are required to submit your PA2Main.java file to Gradescope.
+For PA3, you are required to submit your PA3Main.java file to Gradescope.

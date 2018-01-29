@@ -162,15 +162,23 @@ The output should be:
 ```
 ERROR: Incorrect price input
 ERROR: Incorrect price input
-Baguette: 240
-Blank Pastry: 0
-Cheese Cake: 248
-Chocolate Cake: 873
+Baguette costs $240
+Blank Pastry costs $0
+Cheese Cake costs $248
+Chocolate Cake costs $873
+
+Can buy Blank Pastry for $0
+Can buy Baguette for $240
+Can buy Cheese Cake for $248
+
 The max number of unique pastries that can be bought with $300 is: 2
+
 ```
 
 Notice the two error print outs. First error because the 'Chocolate Cake' pastry has a 'z' in it, and second
-error because the 'Blank Pastry' is of length 0
+error because the 'Blank Pastry' is of length 0.
+
+Also notice that the lines containing the pastry costs are listed in alphabetical order by the name of each pastry. The lines which show each unique pastry that can be bought are listed by in ascending order by price instead.
 
 ### Example 2
 Given the following input file:

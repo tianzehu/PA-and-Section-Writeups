@@ -112,14 +112,14 @@ After you have set all the prices for the pastries,
 put yourself in the shoes of the customer. For example:
 ```
 Your budget is $30.
-baguette = $16
+
+cookie = $4
 cupcake = $12
 pie = $14
-cookie = $4
+baguette = $16
 
-The largest of unique pastries you can buy are the cookie, cupcake, and pie for 3 pastries total.
 
-You can only buy 2 pastries if you buy the baguette.
+The largest of number of unique pastries you can buy are the cookie, cupcake, and pie for 3 pastries total.
 
 ```
 

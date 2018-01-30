@@ -50,24 +50,34 @@ length of 1 unit, price per length of 2 units, etc.
 The file could have any number of lines and each pastry line could have any number of length costs.
 If a pastry has X costs after it, then it is X inches long.
 
-## Simple Example
+## Example
 
 As an example, consider the PublicTestCases/simple.in file:
 ```
-10
+5
 baguette: 2 3 3 4
+donut: 1 2 3 4
+baumkuchen: 1 2 3 4 
 ```
-The customer has a $10 budget.  The pastry shop has only a baguette that is
-4 inches long.  A one-inch pieces is $2, a two-inch pieces is $3, a three-inch
-piece is $3, and a four-inch piece is $4.
+The customer has a $5 budget.  The pastry shop has a baguette that is
+4 inches long with a one-inch pieces is $2, a two-inch pieces is $3, a three-inch
+piece is $3, and a four-inch piece is $4.  The baker also has a donut
+and a baumkuchen that can be broken into 1in for $1, 2 inches for $2, etc.
 
-The idea is to enumerate over all possible ways to cut up the pastry and
+For the baker, the idea is to enumerate over all possible ways to cut 
+up the pastry and
 determine which cutting costs the most and thus makes the most for the
 baker.
+For the customer, the idea is to buy as many full pastries as possible.
+
+### Baker perspective
 
 Below is an enumeration of all possible ways to cut the baguette based
 on number of pieces of each size.  The last column is how much money
-such a cutting will make.  The baker will want to pick the highest one.
+such a cutting will make.  The enumeration is not showing combinations
+that are not physically possible.  For example, a 4in baguette cannot be
+broken into 5 1in pieces.
+The baker will want to pick the highest one.
 ```
  #1in #2in #3in #4in  $$
    0   0    0    0    0
@@ -81,74 +91,80 @@ such a cutting will make.  The baker will want to pick the highest one.
    ...
 ```
 
+A similar enumeration should be done for the donut and the baumkuchen.
+
+### Customer perspective
+
 Then the customer will buy the maximum number of unique pastries they can with
-their budget.  For this simple example, the budget of $10 is enough to buy
+their budget.  For this example the customer would
+do the following enumeration over combinations that cost less than the budget:
+
+```
+baguette donut baumkuchen  cost   #unique
+   0       0        0        0       0
+   0       4        0        4       1
+   0       0        4        4       1
+```
+
+Here we have a tie.  For ties the customer will buy the item
+that comes first alphabetically.  Thus for this example
+the customer would choose the baumkuchen.
+
+Here is what the final output would be for this example:
+
+```
+baguette costs $8
+baumkuchen costs $4
+donut costs $4
+
+Can buy baumkuchen for $4
+
+The max number of unique pastries that can be bought with $5 is: 1
+```
+
+For this simple example, the budget of $10 is enough to buy
 the $8 configuration of four 1 inch pieces of the baguette.
-When a customer buys a pastry, they buy all pieces of the pastry.
-The bakery only has the one pastry that it cut into pieces.
 
-## Another Simple example
-You will first need to consider all the different combinations of cuts 
-and compare their prices to find the best one. 
-For example, consider the following baguette:
-```
-baguette 2, 8, 4, 6
+### Other points to consider
 
-This baguette can be sliced into lengths of 1, 2, 3, and 4. 
-Possible combinations are:
- A single length 4 slice for $6
- A slice length 3 for $4 and a slice length 1 for $2
- Two slices length 2 for a total of $16
- Four slices length 1 for a total of $8
- Two slices of length 1 and one slice of length 2 for a total of $12
- 
- The best way to slice would be 2 slices for $8 each. Set this as the cost for baguettes.  
-```
+* The lines containing the pastry costs are listed in 
+alphabetical order by the name of each pastry.
 
-You will need to consider how to exhaustively search through all 
-possible slicing combinations to find the best one.
+* The lines which show each 
+unique pastry that can be bought are listed in ascending order by price, 
+and within each price listed alphabetically.
 
-After you have set all the prices for the pastries, 
-put yourself in the shoes of the customer. For example:
-```
-Your budget is $30.
+* You can assume the prices are separated by a single space.  We are not going
+to have any tricky inputs with delimiters other than a single space.
 
-cookie = $4
-cupcake = $12
-pie = $14
-baguette = $16
+* Any pastry with no prices given will considered length 0 for price 0.
 
-
-The largest of number of unique pastries you can buy are the cookie, cupcake, and pie for 3 pastries total.
-
-```
-
-Print the max number of unique pastries when you have found it:
-"The max number of unique pastries that can be bought with $budget is: " followed by an int value.
-So the example above would print:
-"The max number of unique pastries that can be bought with $30 is: 3" 
-
+* When a customer buys a pastry, they buy all pieces of the pastry.
+  The bakery only has the one pastry of each kind that it cut into pieces.
+  This is a simplification to make the problem a bit easier.
 
 ## Error Checking
 For this assignment, you will be responsible for developing checks on the input data.
 
 Required error checking:
 ```
-If an invalid file is given then print:
+If an invalid file is given then print the following and exit the program:
 'ERROR: File not found' and exit with a status code of 1
 
-If budget is not a number print:
+If budget is not a number print the following and exit the program:
 'ERROR: Incorrect budget input' and exit with a status code of 1
 
-If any price per length is not a number print:
-'ERROR: Incorrect price input' and continue reading in values, ignoring the non numeric value.
+If any price per length is not a number print the following, 
+ignore that pastry, but continue processing:
+'ERROR: Incorrect price input' and continue reading the other pastries
   ```
  
 Any pastry with no prices given will considered length 0 for price 0.
+This is NOT an error.
 
 ## More Examples
 
-### Example 1
+### An Example with an Error
 Given the following input file:
 ```
 300
@@ -161,26 +177,25 @@ Blank Pastry:
 The output should be: 
 ```
 ERROR: Incorrect price input
-ERROR: Incorrect price input
 Baguette costs $240
 Blank Pastry costs $0
 Cheese Cake costs $248
-Chocolate Cake costs $873
 
 Can buy Blank Pastry for $0
 Can buy Baguette for $240
-Can buy Cheese Cake for $248
 
 The max number of unique pastries that can be bought with $300 is: 2
-
 ```
 
-Notice the two error print outs. First error because the 'Chocolate Cake' pastry has a 'z' in it, and second
-error because the 'Blank Pastry' is of length 0.
+Notice the one error print out due to the 'Chocolate Cake' pastry has a 'z' in it.
+Thus it is ignored, but processing continues.
 
-Also notice that the lines containing the pastry costs are listed in alphabetical order by the name of each pastry. The lines which show each unique pastry that can be bought are listed by in ascending order by price instead.
+Also notice that the lines containing the pastry costs are listed in 
+alphabetical order by the name of each pastry. The lines which show each 
+unique pastry that can be bought are listed in ascending order by price, 
+and within each price listed alphabetically.
 
-### Example 2
+### Another Error Example
 Given the following input file:
 
 ```

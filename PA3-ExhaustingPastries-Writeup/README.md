@@ -122,8 +122,10 @@ Can buy baumkuchen for $4
 The max number of unique pastries that can be bought with $5 is: 1
 ```
 
-For this simple example, the budget of $10 is enough to buy
-the $8 configuration of four 1 inch pieces of the baguette.
+For this simple example, the budget of $5 is enough to buy
+the $4 configuration of the baumkuchen.  It could buy the donut
+instead, but since either could be bought, the on that comes
+alphabetically first is selected instead.
 
 ### Other points to consider
 

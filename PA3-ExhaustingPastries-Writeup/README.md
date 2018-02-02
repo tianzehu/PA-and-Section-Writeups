@@ -60,14 +60,15 @@ donut: 1 2 3 4
 baumkuchen: 1 2 3 4 
 ```
 The customer has a $5 budget.  The pastry shop has a baguette that is
-4 inches long with a one-inch pieces is $2, a two-inch pieces is $3, a three-inch
-piece is $3, and a four-inch piece is $4.  The baker also has a donut
-and a baumkuchen that can be broken into 1in for $1, 2 inches for $2, etc.
+4 inches long with one-inch pieces costing $2 each, 
+two-inch pieces costing $3 each, three-inch pieces costing $3 each, 
+and a four-inch piece is $4 each.  The baker also has a donut
+and a baumkuchen that can be broken into 1in pieces for $1 each,
+2inch pieces for $2 each, etc.
 
 For the baker, the idea is to enumerate over all possible ways to cut 
-up the pastry and
-determine which cutting costs the most and thus makes the most for the
-baker.
+up the pastry and determine which cutting costs the most and thus 
+makes the most for the baker.
 For the customer, the idea is to buy as many full pastries as possible.
 
 ### Baker perspective

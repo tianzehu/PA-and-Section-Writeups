@@ -74,7 +74,7 @@ For the customer, the idea is to buy as many full pastries as possible.
 ### Baker perspective
 
 Below is an enumeration of all possible ways to cut the baguette based
-on number of pieces of each size.  The last column is how much money
+on the number of pieces of each size.  The last column is how much money
 such a cutting will make.  The enumeration is not showing combinations
 that are not physically possible.  For example, a 4in baguette cannot be
 broken into 5 1in pieces.

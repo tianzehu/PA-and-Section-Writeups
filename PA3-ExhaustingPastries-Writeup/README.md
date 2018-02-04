@@ -107,6 +107,9 @@ baguette donut baumkuchen  cost   #unique
    0       0        4        4       1
 ```
 
+Hint: the customer should buy pastries from cheapest to
+more expensive.
+
 Here we have a tie.  For ties the customer will buy the item
 that comes first alphabetically.  Thus for this example
 the customer would choose the baumkuchen.

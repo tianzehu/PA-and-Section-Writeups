@@ -1,4 +1,4 @@
-# PA4-BoolSAT-Writeup (Status: Draft, 2/4/18 10:30pm)
+# PA4-BoolSAT-Writeup (Status: Posted, 2/5/18 11:15 am)
 
 For PA4, you will be writing a program that reads in a boolean expression from a file and then 
 determines if it is ever possible for that expression to be satisfiable (evaluate to true).  
@@ -265,6 +265,8 @@ Decomposition
   one screen.
 
 * Make things as simple as possible.
+  * Only use one Scanner instance.
+  * Don't use lambda functions or other features in non-standard ways.
   * Avoid nested loops.
   * Avoid nesting conditionals.
   * Avoid chaining: see the Piazza post for more info
@@ -273,9 +275,12 @@ Decomposition
 Code Clarity
 * YOU should be able to read, understand, and explain your own code
 to someone else a couple days after you wrote it.
+  * No magic numbers
+  * No methods written to just get the test cases to work
 
-* There needs to be a balance between no comments and a comment for
-every line in the program.  Either extreme will result in points off.
+* There needs to be a balance between no comments in the body of the
+methods and a comment for every line in the program.  Either extreme 
+will result in points off.
 
 * The file header should include instructions on how someone would
 use this program.  To use the program, one would need to know the

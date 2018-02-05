@@ -1,4 +1,4 @@
-# PA4-BoolSAT-Writeup
+# PA4-BoolSAT-Writeup (Status: Draft, 2/4/18 10:30pm)
 
 For PA4, you will be writing a program that reads in a boolean expression from a file and then 
 determines if it is ever possible for that expression to be satisfiable (evaluate to true).  

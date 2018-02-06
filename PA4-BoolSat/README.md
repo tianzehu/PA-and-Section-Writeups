@@ -15,7 +15,7 @@ The goal of this assignment is to practice the following ideas:
  - More exhaustive search.
  - Multiple data structures being used at the same time (tree and map of variables to bool values)
 
-For this assignment you have be provided a library (already written code bundled into a package) 
+For this assignment you have been provided a library (already written code bundled into a package) 
 that builds syntax trees from boolean expression strings.  The bool_exp package contains all of 
 the source code for this library. 
 

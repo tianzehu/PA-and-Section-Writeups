@@ -243,7 +243,6 @@ should you use for representing variable configurations?
 
 
 ## Grading Criteria
-FIXME: there will be more for decomposition and code clarity
 
 Half of the PA4 grade will be correctness.  For this assignment, there
 will be some private test cases on Gradescope.
@@ -253,12 +252,12 @@ the JUnit tests, and a peer review.
 
 Decomposition
 * Should carefully select data structures that implement the
-  required functionality.  For example, if you avoid using HashMaps,
+  required functionality.  For example, if you avoid using Maps,
   it will probably result in more complicated code and thus points off.
 
 * Should just use JUnit methods in ASTNodeTest.java and static methods in PA4BoolSat.java.
 
-* Use a single file.  This should be a small program (<200 lines).
+* Use a single file for Task#2, PA4BoolSat.java.  This should be a small program (<200 lines).
 
 * Each static method should be less than 30 lines.  This INCLUDES
   comments.  It is easier to read a function if it can all fit on

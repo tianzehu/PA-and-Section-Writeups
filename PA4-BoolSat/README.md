@@ -128,7 +128,7 @@ JUnit test cases?
 
 ## Task #2 - The SAT[isfiability] Problem (You need to do this)
 Implement a program in PA4BoolSat.java that:
- 1. Constructs an Abstrct Syntax Tree for the expression in the input file provided by the 
+ 1. Constructs an Abstract Syntax Tree for the expression in the input file provided by the 
  first command line argument (`args[0]`). 
  2. Optionally accepts a DEBUG command line option in the second command line argument. 
  3. Exhaustively searches over all possible assignments of values to each boolean variable. If 

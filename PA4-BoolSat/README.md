@@ -253,15 +253,17 @@ This is the process you need to follow when writing test cases:
 
  1. **THINK** about what needs to happen. "When I call this method what should it do?"
  2. **THINK** about what the correct output should be for a particular input. "When I call this method with x and y as input, what should the output be?"
- 3. **Write code** in the test case that creates these inputs, and feeds them into the code being tested.  
- 4. **Write code** in the test case to ensure that the actual result was correct. The actual output from the code being tested should match the expected output that we hypothesized in (2). Use the Assert class that JUnit provides. 
+ 3. **WRITE CODE** in the test case that creates these inputs, and feeds them into the code being tested.  
+ 4. **WRITE CODE** in the test case to ensure that the actual result was correct. The actual output from the code being tested should match the expected output that we hypothesized in (2). Use the Assert class that JUnit provides. 
+
+[The JUnit Assert class documentation](https://junit.org/junit4/javadoc/latest/org/junit/Assert.html) lists all of the assert methods that can be used to test expected output vs actual output. Some of the most useful are `assertTrue()`, `assertFalse()`, `assertEquals()`, `assertNull()`, etc. 
 
 ### Exmple
 For example, the Java standard library has a Math class to do various math operations. Let's apply this testing process to test the math class. 
 
- 1. The Math.min(int a, int b) method should return the smaller of the two input numbers. 
- 2. The Math.min() method accepts two numbers as input, and returns a number. If I provide that method 55 and 77, the output should be 55. 
- 3. Write the code to set up this scenario:
+ 1. (Thinking) The `Math.min(int a, int b)` method should return the smaller of the two input numbers. 
+ 2. (Thinking) The `min` method accepts two numbers as input, and returns the smaller one. If I provide that method 55 and 77, the output should be 55. 
+ 3. (Writing) Write the code to set up this scenario:
 ```
 @Test
 public void testMath() {
@@ -269,7 +271,7 @@ public void testMath() {
     int result = Math.min(small, big);
 }
 ```
- 4. We haven't actually tested anything yet. Since the expected output is 55, if Math.min() is implemented correctly that is what the value of `result` should be. So we write an assert to test the expected output against the actual output. 
+ 4. (Writing) We haven't actually tested anything yet. Since the expected output is 55, if Math.min() is implemented correctly that is what the value of `result` should be. So we write an assert to test the expected output against the actual output. 
 ```
 @Test
 public void testMath() {
@@ -279,7 +281,7 @@ public void testMath() {
 }
 ```
 
-If Math.min() is not implemented correctly, then the test case would fail. 
+If `Math.min()` is not implemented correctly, then the test case would fail. If we have lots and lots of test cases and they all pass, we can be reasonably certain that the method is implemented perfectly.
 
 ### Assignment Hint
 You need to test all of the functionality of the ASTNode.java class. **Your first step should be reading every line of code in that class (it's a small class) and understanding what it does.** How can you test something if you don't know what it is supposed to be doing? If you have questions about how it is implemented, ask on Piazza. Then follow the 4 steps above. Let's do another example using the ASTNode.java class.

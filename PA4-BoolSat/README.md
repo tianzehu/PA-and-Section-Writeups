@@ -306,7 +306,8 @@ anything down.
 
 For PA4, you are required to submit your PA4BoolSat.java and ASTNodeTest.java file to Gradescope.
 
-(NEW) You are also required to submit PA4BoolSat.java to Aropa for peer review.
+(NEW) You are also required to submit PA4BoolSat.java to Aropa for peer review.  Log into 
+https://aropa2.gla.ac.uk as was done during Section 3.
 
 
 
